@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
                 <form onSubmit={this.handleSubmit} className="ui form" action=""> {/*second way of solving the this.bind error of undefined passing an arrow function for here*/}
                    <div className="field"> 
                    <label>Image Search</label>
-                   <input onChange={(e) => this.setState({term: e.target.value})} value={this.state.term} type="search" name="" id=""/>
+                   <input onChange={(e) => this.setState({term: e.target.value})} value={this.state.term} type="search" name="" id="" placeholder="Searching from unsplash Api"/>
                    </div>
                 </form>
             </div>

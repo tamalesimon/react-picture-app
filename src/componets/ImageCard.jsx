@@ -33,20 +33,21 @@ class ImageCard extends React.Component {
           <img
             style={{ width: '100%', display: 'block' }}
             alt={this.props.image.description}
-            src={this.props.image.urls.small} /></div>
+            src={this.props.image.urls.regular} /></div>
         <div class="grid__body">
           <div class="relative">            
             <h1 class="grid__title">{this.props.image.title}</h1>
             <p class="grid__author">{this.props.image.author}</p>
           </div>
           <div class="mt-auto" >
-          {this.state.isHovering && <span className="text-block grid_tag">{this.props.image.description}</span>}
+           <span className="grid_tag">{this.props.image.alt_description}</span>
             
           </div>
         </div>
         
       </div>
     );
+    
 }
 }
 

@@ -1,20 +1,24 @@
 import React from 'react';
-import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry';
+//import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry';
 import ImageCard from './ImageCard';
 
-const ImageList = (props) => {
+const ImageList = ({images}) => {
 
-    const imgs = props.images.map((image) => {
+    if(!images){
+        return <div>Loading ... </div>
+    }
+
+    const imgs = images.map((image) => {
         return <ImageCard key={image.id} image={image} />;
     }); 
    
     return (        
         <>
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
-                <Masonry>
-                    {imgs}
-                </Masonry>
-            </ResponsiveMasonry>
+            {/* <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+                <Masonry> */}
+                   <div className="masonry"> {imgs} </div>
+                {/* </Masonry>
+            </ResponsiveMasonry> */}
         </>
     )
 }

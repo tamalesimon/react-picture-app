@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css';
+import '../styles.scss';
 
 class ImageCard extends React.Component {
 
@@ -26,16 +26,26 @@ class ImageCard extends React.Component {
     render() {
         //const style = this.state.hover ? {display: 'none'} : {display: 'block'}
     return(
-        <div>        
-            <div 
-            onMouseEnter={this.handleMouseHover}
-            onMouseLeave={this.handleMouseHover}>
-            <img
-            style={{width:'100%', display:'block'}} 
-            alt={this.props.image.description} 
+      <div className="grid">
+        <div
+          onMouseEnter={this.handleMouseHover}
+          onMouseLeave={this.handleMouseHover}>
+          <img
+            style={{ width: '100%', display: 'block' }}
+            alt={this.props.image.description}
             src={this.props.image.urls.small} /></div>
-            {this.state.isHovering && <div className="text-block">{this.props.image.description}</div>}
+        <div class="grid__body">
+          <div class="relative">            
+            <h1 class="grid__title">{this.props.image.title}</h1>
+            <p class="grid__author">{this.props.image.author}</p>
+          </div>
+          <div class="mt-auto" >
+          {this.state.isHovering && <span className="text-block grid_tag">{this.props.image.description}</span>}
+            
+          </div>
         </div>
+        
+      </div>
     );
 }
 }

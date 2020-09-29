@@ -16,6 +16,10 @@ class App extends React.Component {
 
         //this.onSearchSubmit = this.onSearchSubmit.bind(this); <= solution number 1
         
+    } 
+
+    componentDidMount() {
+        this.onSearchSubmit('pictures');
     }
     
 

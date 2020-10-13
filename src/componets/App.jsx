@@ -28,7 +28,7 @@ class App extends React.Component {
             params: {query: term},           
         });
         
-        console.log(this);
+        console.log(response.data.results);
         this.setState({unsplashImages: response.data.results});
     }
     render() {

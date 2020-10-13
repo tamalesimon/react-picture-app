@@ -2,13 +2,9 @@ import React from 'react';
 //import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry';
 import ImageCard from './ImageCard';
 
-const ImageList = ({images}) => {
+const ImageList = ({images}) => {    
 
-    if(!images){
-        return <div>Loading ... </div>
-    }
-
-    const imgs = images.map((image) => {
+    const imgs = images.map((image) => {        
         return <ImageCard key={image.id} image={image} />;
     }); 
    

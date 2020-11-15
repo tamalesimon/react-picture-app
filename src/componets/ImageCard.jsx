@@ -26,7 +26,7 @@ class ImageCard extends React.Component {
     render() {
         //const style = this.state.hover ? {display: 'none'} : {display: 'block'}
     return(
-      <div className="grid">
+      <div className="grid transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">
         <div
           onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}>

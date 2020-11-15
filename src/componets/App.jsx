@@ -3,6 +3,7 @@ import unsplash from '../api/unsplash';
 
 import SearchBar from './SearchBar';
 import ImageList from './ImageList';
+import Footer from './Footer';
 
 class App extends React.Component {
 
@@ -37,6 +38,7 @@ class App extends React.Component {
             <SearchBar onSubmit={this.onSearchSubmit} />
             
             <ImageList images={this.state.unsplashImages}/>
+            <Footer/>
         </div>
     );
 

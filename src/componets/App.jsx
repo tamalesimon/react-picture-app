@@ -35,7 +35,7 @@ class App extends React.Component {
     render() {
     return (
         <div className="ui container" style={{ margin: "10px"}}>
-            <SearchBar onSubmit={this.onSearchSubmit} />
+            <SearchBar onSubmit={this.onSearchSubmit} tags={this.state.unsplashImages.tags}/>
             
             <ImageList images={this.state.unsplashImages}/>
             <Footer/>
